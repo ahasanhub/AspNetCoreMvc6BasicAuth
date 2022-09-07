@@ -18,12 +18,12 @@ namespace AspNetCore6BasicAuth.Controllers
         {
             return View();
         }
-
+        [Authorize(Roles ="Admin,User")]
         public IActionResult Privacy()
         {
             return View();
         }
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public IActionResult Secrate()
         {
             return View();
