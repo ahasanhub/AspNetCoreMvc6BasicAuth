@@ -15,7 +15,7 @@ namespace AspNetCoreAuth.Data.Repositories
             FavoriteColor="Green",Role="Parent",GoogleId="101517359495305583936"},
              new User{Id=2,Name="zayn",Password="jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=",
             FavoriteColor="Green",Role="Child",GoogleId="101517359495305583936"},
-        };
+        };//Pass:123456
         public User GetByUsernameAndPassword(string username,string password) 
         {
                         
