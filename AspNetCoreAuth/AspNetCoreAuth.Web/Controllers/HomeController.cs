@@ -1,9 +1,9 @@
-﻿using AspNetCore6BasicAuth.Models;
+﻿using AspNetCoreAuth.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace AspNetCore6BasicAuth.Controllers
+namespace AspNetCoreAuth.Web.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,16 +18,14 @@ namespace AspNetCore6BasicAuth.Controllers
         {
             return View();
         }
-        [Authorize(Roles ="Admin,User")]
+
         public IActionResult Privacy()
         {
             return View();
         }
-        [Authorize(Roles ="Admin")]
-        public IActionResult Secrate()
-        {
-            return View();
-        }
+        [Authorize]
+        public IActionResult Secrate() => Content("Secrate Page");
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

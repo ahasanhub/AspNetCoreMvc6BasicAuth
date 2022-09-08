@@ -1,4 +1,4 @@
-namespace AspNetCore6BasicAuth.Models
+namespace AspNetCoreAuth.Web.Models
 {
     public class ErrorViewModel
     {

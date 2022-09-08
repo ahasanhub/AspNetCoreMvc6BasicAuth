@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AspNetCore6BasicAuth.Models
+namespace AspNetCoreAuth.Web.Models
 {
     public class LoginModel
     {
