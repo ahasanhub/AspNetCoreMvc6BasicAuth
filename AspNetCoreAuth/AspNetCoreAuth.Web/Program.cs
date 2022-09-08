@@ -1,5 +1,7 @@
 using AspNetCoreAuth.Data.Repositories;
+using AspNetCoreAuth.Web;
 using Microsoft.AspNetCore.Authentication.Cookies;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,15 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, config =>
     {
         config.Cookie.Name = "Auth.Cookie";
+    })
+    .AddCookie(ExternalAuthenticationDefaults.AuthenticationScheme)
+    .AddGoogle(o => 
+    {
+        o.SignInScheme= ExternalAuthenticationDefaults.AuthenticationScheme;
+        o.ClientId = builder.Configuration["Google:ClientId"];
+        o.ClientSecret = builder.Configuration["Google:ClientSecret"];   
     });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

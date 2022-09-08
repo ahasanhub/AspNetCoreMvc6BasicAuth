@@ -12,7 +12,7 @@ namespace AspNetCoreAuth.Data.Repositories
         private List<User> users = new List<User>
         {
             new User{Id=1,Name="ahasan",Password="jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=",
-            FavoriteColor="Green",Role="Parent",GoogleId="101517359495305583936"},
+            FavoriteColor="Green",Role="Parent",GoogleId="116353184118060494413"},
              new User{Id=2,Name="zayn",Password="jZae727K08KaOmKSgOaGzww/XVqGr/PKEgIMkjrcbJI=",
             FavoriteColor="Green",Role="Child",GoogleId="101517359495305583936"},
         };//Pass:123456

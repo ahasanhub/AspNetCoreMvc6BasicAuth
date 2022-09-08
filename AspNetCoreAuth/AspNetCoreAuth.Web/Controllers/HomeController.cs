@@ -24,7 +24,10 @@ namespace AspNetCoreAuth.Web.Controllers
             return View();
         }
         [Authorize]
-        public IActionResult Secrate() => Content("Secrate Page");
+        public IActionResult Secrate() 
+        {
+            return View();
+        }
         
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
