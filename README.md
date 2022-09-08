@@ -6,4 +6,5 @@ Resource:
 https://app.pluralsight.com/course-player?clipId=2ffc9aa5-09b5-49f5-a8c8-d20ea9f73884
 
 https://developers.google.com/identity/sign-in/web/sign-in
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/google-logins?view=aspnetcore-6.0
 
