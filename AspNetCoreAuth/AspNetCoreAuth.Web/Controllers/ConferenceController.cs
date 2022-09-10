@@ -1,9 +1,11 @@
 ﻿using AspNetCoreAuth.Data.Models;
 using AspNetCoreAuth.Data.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreAuth.Web.Controllers
 {
+    [Authorize]
     public class ConferenceController : Controller
     {
         private readonly IConferenceRepository _conferenceRepository;

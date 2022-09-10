@@ -1,5 +1,6 @@
 ﻿using AspNetCoreAuth.Data.Models;
 using AspNetCoreAuth.Data.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreAuth.Web.Controllers
@@ -34,6 +35,7 @@ namespace AspNetCoreAuth.Web.Controllers
                 await _proposalRepository.Add(proposal);
             return RedirectToAction("Index", new { conferenceId = proposal.ConferenceId });
         }
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Approve(int proposalId)
         {
             var proposal = await _proposalRepository.Approve(proposalId);
